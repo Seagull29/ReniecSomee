@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Buscar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BuscarSoapIn">
+    <wsdl:part name="parameters" element="tns:Buscar" />
+  </wsdl:message>
+  <wsdl:message name="BuscarSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsReniecSoap">
+    <wsdl:operation name="Buscar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Buscar en el registro de la Reniec</wsdl:documentation>
+      <wsdl:input message="tns:BuscarSoapIn" />
+      <wsdl:output message="tns:BuscarSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsReniecSoap" type="tns:wsReniecSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Buscar">
+      <soap:operation soapAction="http://tempuri.org/Buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsReniecSoap12" type="tns:wsReniecSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Buscar">
+      <soap12:operation soapAction="http://tempuri.org/Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsReniec">
+    <wsdl:port name="wsReniecSoap" binding="tns:wsReniecSoap">
+      <soap:address location="http://www.boliviansurfers.somee.com/wsReniec.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsReniecSoap12" binding="tns:wsReniecSoap12">
+      <soap12:address location="http://www.boliviansurfers.somee.com/wsReniec.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

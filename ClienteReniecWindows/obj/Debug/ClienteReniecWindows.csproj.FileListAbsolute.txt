@@ -1,0 +1,10 @@
+C:\Users\USER\Documents\Visual Studio 2019\ReniecSomee\ClienteReniecWindows\obj\Debug\ClienteReniecWindows.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\Visual Studio 2019\ReniecSomee\ClienteReniecWindows\obj\Debug\ClienteReniecWindows.Form1.resources
+C:\Users\USER\Documents\Visual Studio 2019\ReniecSomee\ClienteReniecWindows\obj\Debug\ClienteReniecWindows.Properties.Resources.resources
+C:\Users\USER\Documents\Visual Studio 2019\ReniecSomee\ClienteReniecWindows\obj\Debug\ClienteReniecWindows.csproj.GenerateResource.cache
+C:\Users\USER\Documents\Visual Studio 2019\ReniecSomee\ClienteReniecWindows\obj\Debug\ClienteReniecWindows.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\Visual Studio 2019\ReniecSomee\ClienteReniecWindows\bin\Debug\ClienteReniecWindows.exe.config
+C:\Users\USER\Documents\Visual Studio 2019\ReniecSomee\ClienteReniecWindows\bin\Debug\ClienteReniecWindows.exe
+C:\Users\USER\Documents\Visual Studio 2019\ReniecSomee\ClienteReniecWindows\bin\Debug\ClienteReniecWindows.pdb
+C:\Users\USER\Documents\Visual Studio 2019\ReniecSomee\ClienteReniecWindows\obj\Debug\ClienteReniecWindows.exe
+C:\Users\USER\Documents\Visual Studio 2019\ReniecSomee\ClienteReniecWindows\obj\Debug\ClienteReniecWindows.pdb
